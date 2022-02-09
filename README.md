@@ -10,27 +10,21 @@ This example uses the POST request from the [Battlesnake API docs](https://docs.
 
 ```json
 {
-  "battlesnakeGameId": "game-00fe20da-94ad-11ea-bb37",
-  "battlesnakeRules": "standard",
-  "battlesnakeTurn": 14,
+  "snakeGameId": "game-00fe20da-94ad-11ea-bb37",
+  "snakeRules": "standard",
+  "snakeTurn": 14,
 
-  "battlesnakeBoard": "{\"height\":11,\"width\":11,\"food\":[{\"x\":5,\"y\":5},{\"x\":9,\"y\":0},{\"x\":2,\"y\":6}],\"hazards\":[{\"x\":3,\"y\":2}]",
+  "snakeBoard": "base-64-encoded-JSON-object",
 
-  "battlesnakeName": "My Snake",
-  "battlesnakeId": "snake-508e96ac-94ad-11ea-bb37",
-  "battlesnakeHealth": 54,
-  "battlesnakeLength": 3,
-  "battlesnakeBody": "[{\"x\":0,\"y\":0},{\"x\":1,\"y\":0},{\"x\":2,\"y\":0}]",
-  "battlesnakeHead": "{\"x\":0,\"y\":0}",
-  "battlesnakeCustomizations": "{\"color\":\"#FF0000\",\"head\":\"pixel\",\"tail\":\"pixel\"}",
+  "snakeName": "My Snake",
+  "snakeId": "snake-508e96ac-94ad-11ea-bb37",
+  "snakeHealth": 54,
+  "snakeLength": 3,
 
-  "battlesnakeOpponent_1_Name": "Another Snake",
-  "battlesnakeOpponent_1_Id": "snake-b67f4906-94ae-11ea-bb37",
-  "battlesnakeOpponent_1_Health": 16,
-  "battlesnakeOpponent_1_Length": 4,
-  "battlesnakeOpponent_1_Body": "[{\"x\":5,\"y\":4},{\"x\":5,\"y\":3},{\"x\":6,\"y\":3},{\"x\":6,\"y\":2}]",
-  "battlesnakeOpponent_1_Head": "{\"x\":5,\"y\":4}",
-  "battlesnakeOpponent_1_Customizations": "{\"color\":\"#26CF04\",\"head\":\"silly\",\"tail\":\"curled\"}"
+  "snakeOpponent_1_Name": "Another Snake",
+  "snakeOpponent_1_Id": "snake-b67f4906-94ae-11ea-bb37",
+  "snakeOpponent_1_Health": 16,
+  "snakeOpponent_1_Length": 4
 }
 ```
 
