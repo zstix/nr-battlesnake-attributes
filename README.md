@@ -17,7 +17,7 @@ This example uses the POST request from the [Battlesnake API docs](https://docs.
   "snakeBoardHeight": 11,
   "snakeBoardWidth": 11,
   "snakeBoardFood": "W3sieCI6NSwieSI6NX0seyJ4Ijo5LCJ5IjowfSx7IngiOjIsInkiOjZ9XQ==",
-  "snakeBoardHazards": W3sieCI6MywieSI6Mn1d,
+  "snakeBoardHazards": "W3sieCI6MywieSI6Mn1d",
 
   "snakeName": "My Snake",
   "snakeId": "snake-508e96ac-94ad-11ea-bb37",
