@@ -27,5 +27,3 @@ This example uses the POST request from the [Battlesnake API docs](https://docs.
   "snakeOpponent_1_Length": 4
 }
 ```
-
-_Note: due to the limit of custom attributes, this format only works for games with 7 snakes opponents (not including your own snake)._
