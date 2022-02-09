@@ -2,7 +2,7 @@
  * @typedef {Object} Battlesnake
  * @property {string} id
  * @property {string} name
- * @property {string} health
+ * @property {number} health
  * @property {number} length
  * @property {Object[]} body
  * @property {Object} head
