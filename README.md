@@ -10,26 +10,26 @@ This example uses the POST request from the [Battlesnake API docs](https://docs.
 
 ```json
 {
-  snakeGameId: 'game-00fe20da-94ad-11ea-bb37',
-  snakeRules: 'standard',
-  snakeTurn: 14,
+  "snakeGameId": 'game-00fe20da-94ad-11ea-bb37',
+  "snakeRules": 'standard',
+  "snakeTurn": 14,
 
-  snakeBoardHeight: 11,
-  snakeBoardWidth: 11,
-  snakeBoardFood: 'W3sieCI6NSwieSI6NX0seyJ4Ijo5LCJ5IjowfSx7IngiOjIsInkiOjZ9XQ==',
-  snakeBoardHazards: W3sieCI6MywieSI6Mn1d,
+  "snakeBoardHeight": 11,
+  "snakeBoardWidth": 11,
+  "snakeBoardFood": 'W3sieCI6NSwieSI6NX0seyJ4Ijo5LCJ5IjowfSx7IngiOjIsInkiOjZ9XQ==',
+  "snakeBoardHazards": W3sieCI6MywieSI6Mn1d,
 
-  snakeName: 'My Snake',
-  snakeId: 'snake-508e96ac-94ad-11ea-bb37',
-  snakeHealth: 54,
-  snakeLength: 3,
-  snakeData: 'eyJib2R5IjpbeyJ4IjowLCJ5IjowfSx7IngiOjEsInkiOjB9LHsieCI6MiwieSI6MH1dLCJoZWFkIjp7IngiOjAsInkiOjB9LCJjb2xvciI6IiNGRjAwMDAifQ==',
+  "snakeName": 'My Snake',
+  "snakeId": 'snake-508e96ac-94ad-11ea-bb37',
+  "snakeHealth": 54,
+  "snakeLength": 3,
+  "snakeData": 'eyJib2R5IjpbeyJ4IjowLCJ5IjowfSx7IngiOjEsInkiOjB9LHsieCI6MiwieSI6MH1dLCJoZWFkIjp7IngiOjAsInkiOjB9LCJjb2xvciI6IiNGRjAwMDAifQ==',
 
-  snakeOpponent_1_Name: 'Another Snake',
-  snakeOpponent_1_Id: 'snake-b67f4906-94ae-11ea-bb37',
-  snakeOpponent_1_Health: 16,
-  snakeOpponent_1_Length: 4,
-  snakeOpponent_1_Data: 'eyJib2R5IjpbeyJ4Ijo1LCJ5Ijo0fSx7IngiOjUsInkiOjN9LHsieCI6NiwieSI6M30seyJ4Ijo2LCJ5IjoyfV0sImhlYWQiOnsieCI6NSwieSI6NH0sImNvbG9yIjoiIzI2Q0YwNCJ9'
+  "snakeOpponent_1_Name": 'Another Snake',
+  "snakeOpponent_1_Id": 'snake-b67f4906-94ae-11ea-bb37',
+  "snakeOpponent_1_Health": 16,
+  "snakeOpponent_1_Length": 4,
+  "snakeOpponent_1_Data": 'eyJib2R5IjpbeyJ4Ijo1LCJ5Ijo0fSx7IngiOjUsInkiOjN9LHsieCI6NiwieSI6M30seyJ4Ijo2LCJ5IjoyfV0sImhlYWQiOnsieCI6NSwieSI6NH0sImNvbG9yIjoiIzI2Q0YwNCJ9'
 }
 ```
 
