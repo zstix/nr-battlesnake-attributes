@@ -24,13 +24,13 @@ This example uses the POST request from the [Battlesnake API docs](https://docs.
   "battlesnakeHead": "{\"x\":0,\"y\":0}",
   "battlesnakeCustomizations": "{\"color\":\"#FF0000\",\"head\":\"pixel\",\"tail\":\"pixel\"}",
 
-  "battlesnakeOpponent_1_Name": "My Snake",
-  "battlesnakeOpponent_1_Id": "snake-508e96ac-94ad-11ea-bb37",
-  "battlesnakeOpponent_1_Health": 54,
-  "battlesnakeOpponent_1_Length": 3,
-  "battlesnakeOpponent_1_Body": "[{\"x\":0,\"y\":0},{\"x\":1,\"y\":0},{\"x\":2,\"y\":0}]",
-  "battlesnakeOpponent_1_Head": "{\"x\":0,\"y\":0}",
-  "battlesnakeOpponent_1_Customizations": "{\"color\":\"#FF0000\",\"head\":\"pixel\",\"tail\":\"pixel\"}"
+  "battlesnakeOpponent_1_Name": "Another Snake",
+  "battlesnakeOpponent_1_Id": "snake-b67f4906-94ae-11ea-bb37",
+  "battlesnakeOpponent_1_Health": 16,
+  "battlesnakeOpponent_1_Length": 4,
+  "battlesnakeOpponent_1_Body": "[{\"x\":5,\"y\":4},{\"x\":5,\"y\":3},{\"x\":6,\"y\":3},{\"x\":6,\"y\":2}]",
+  "battlesnakeOpponent_1_Head": "{\"x\":5,\"y\":4}",
+  "battlesnakeOpponent_1_Customizations": "{\"color\":\"#26CF04\",\"head\":\"silly\",\"tail\":\"curled\"}"
 }
 ```
 
