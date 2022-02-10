@@ -18,7 +18,7 @@ const app = express();
 
 // ...
 
-app.post(/"move", (req, res) => {
+app.post("/move", (req, res) => {
   newrelic.addCustomAttributes(getCustomAttributes(req.body));
   // ...your snake logic goes here
 });
