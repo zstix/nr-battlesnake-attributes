@@ -86,4 +86,4 @@ const getCustomAttributes = ({ game, board, turn, you }) => {
   };
 };
 
-export default getCustomAttributes;
+module.exports = getCustomAttributes;
