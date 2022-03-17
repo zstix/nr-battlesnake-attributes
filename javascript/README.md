@@ -22,4 +22,9 @@ app.post("/move", (req, res) => {
   newrelic.addCustomAttributes(getCustomAttributes(req.body));
   // ...your snake logic goes here
 });
+
+app.post("/end", (req, res) => {
+  newrelic.addCustomAttributes(getCustomAttributesEnd('my-cool-snake-name', req.body));
+  // ...other logic here
+});
 ```

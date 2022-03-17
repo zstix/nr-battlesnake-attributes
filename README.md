@@ -3,7 +3,7 @@
 In this repository you can find code and instructions for instrumenting a Battlsnake's performance with [New Relic custom attributes](https://docs.newrelic.com/docs/data-apis/custom-data/custom-events/collect-custom-attributes/). If you would like to add instrumentation in a language that is not yet documented in this repository, please use to following format for consistency (and consider submitting a PR!).
 
 ## Custom Attribute Format
-
+### Move requests
 Use the following JSON format for adding your custom attributes. These will appear alongside the relevant _Transaction_ data in New Relic.
 
 This example uses the POST request from the [Battlesnake API docs](https://docs.battlesnake.com/references/api/sample-move-request):
@@ -30,6 +30,29 @@ This example uses the POST request from the [Battlesnake API docs](https://docs.
   "snakeOpponent_1_Health": 16,
   "snakeOpponent_1_Length": 4,
   "snakeOpponent_1_Data": "eyJib2R5IjpbeyJ4Ijo1LCJ5Ijo0fSx7IngiOjUsInkiOjN9LHsieCI6NiwieSI6M30seyJ4Ijo2LCJ5IjoyfV0sImhlYWQiOnsieCI6NSwieSI6NH0sImNvbG9yIjoiIzI2Q0YwNCJ9"
+}
+```
+
+### End requests
+Use the following JSON format for adding your custom attributes. These will appear alongside the relevant _Transaction_ data in New Relic.
+
+This example uses the POST request from the [Battlesnake API docs](https://docs.battlesnake.com/references/api/sample-move-request):
+
+```json
+{
+  "snakeGameId": "game-00fe20da-94ad-11ea-bb37",
+  "snakeRules": "standard",
+  "snakeTurn": 14,
+
+  "snakeName": "My Snake",
+  "snakeId": "snake-508e96ac-94ad-11ea-bb37",
+  "snakeHealth": 54,
+  "snakeLength": 3,
+
+  "snakeGameWinnerName": "My Snake",
+  "snakeGameWinnerId": "snake-508e96ac-94ad-11ea-bb37",
+  "snakeGameIsWin": true,
+  "snakeGameReplayLink": "https://play.battlesnake.com/g/game-00fe20da-94ad-11ea-bb37"
 }
 ```
 
