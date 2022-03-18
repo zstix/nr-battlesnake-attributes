@@ -3,7 +3,9 @@
 In this repository you can find code and instructions for instrumenting a Battlsnake's performance with [New Relic custom attributes](https://docs.newrelic.com/docs/data-apis/custom-data/custom-events/collect-custom-attributes/). If you would like to add instrumentation in a language that is not yet documented in this repository, please use to following format for consistency (and consider submitting a PR!).
 
 ## Custom Attribute Format
+
 ### Move requests
+
 Use the following JSON format for adding your custom attributes. These will appear alongside the relevant _Transaction_ data in New Relic.
 
 This example uses the POST request from the [Battlesnake API docs](https://docs.battlesnake.com/references/api/sample-move-request):
@@ -33,7 +35,19 @@ This example uses the POST request from the [Battlesnake API docs](https://docs.
 }
 ```
 
+In order to keep keep the attribute size under the [255 byte limit](https://docs.newrelic.com/docs/data-apis/custom-data/custom-events/data-requirements-limits-custom-event-data/), some of the board state should be turned into a JSON string and base64 encoded:
+
+| Attribute              | Description                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------ |
+| `snakeBoardFood`       | `board.food` in the POST request                                               |
+| `snakeBoardHazards`    | `board.hazards` in the POST request                                            |
+| `snakeData`            | The `body`, `head` and `customizations.color` (as `color`) data for your snake |
+| `snakeOpponent_N_Data` | Same as `snakeData` for each opponent                                          |
+
+These encoded values are optional, but will be utilized for some upcoming custom visualizations in New Relic.
+
 ### End requests
+
 Use the following JSON format for adding your custom attributes. These will appear alongside the relevant _Transaction_ data in New Relic.
 
 This example uses the POST request from the [Battlesnake API docs](https://docs.battlesnake.com/references/api/sample-move-request):
@@ -55,14 +69,3 @@ This example uses the POST request from the [Battlesnake API docs](https://docs.
   "snakeGameReplayLink": "https://play.battlesnake.com/g/game-00fe20da-94ad-11ea-bb37"
 }
 ```
-
-In order to keep keep the attribute size under the [255 byte limit](https://docs.newrelic.com/docs/data-apis/custom-data/custom-events/data-requirements-limits-custom-event-data/), some of the board state should be turned into a JSON string and base64 encoded:
-
-| Attribute              | Description                                                                    |
-| ---------------------- | ------------------------------------------------------------------------------ |
-| `snakeBoardFood`       | `board.food` in the POST request                                               |
-| `snakeBoardHazards`    | `board.hazards` in the POST request                                            |
-| `snakeData`            | The `body`, `head` and `customizations.color` (as `color`) data for your snake |
-| `snakeOpponent_N_Data` | Same as `snakeData` for each opponent                                          |
-
-These encoded values are optional, but will be utilized for some upcoming custom visualizations in New Relic.

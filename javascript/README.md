@@ -5,14 +5,14 @@ To use this helper script, add the [New Relic Nodejs agent](https://docs.newreli
 ## Express example:
 
 ```js
-const express = require('express');
+const express = require("express");
 
 // Add the New Relic APM agent.
-const newrelic = require('newrelic');
+const newrelic = require("newrelic");
 
 // Add the helper script.
 // Feel free to place this wherever make sense for your application.
-const getCustomAttributes = require('./getCustomAttributes.js');
+const getCustomAttributes = require("./getCustomAttributes.js");
 
 const app = express();
 
@@ -24,7 +24,7 @@ app.post("/move", (req, res) => {
 });
 
 app.post("/end", (req, res) => {
-  newrelic.addCustomAttributes(getCustomAttributesEnd('my-cool-snake-name', req.body));
+  newrelic.addCustomAttributes(getCustomAttributesEnd(req.body));
   // ...other logic here
 });
 ```

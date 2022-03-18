@@ -87,7 +87,6 @@ const getCustomAttributes = ({ game, board, turn, you }) => {
 };
 
 /**
- * @param {String} mySnakeName - Your snake name, used to determine win/loss
  * @param {Object} data - The game state provided in the POST request
  * @param {Object} data.game
  * @param {string} data.game.id
@@ -96,7 +95,7 @@ const getCustomAttributes = ({ game, board, turn, you }) => {
  * @param {Board} data.board
  * @param {Battlesnake} data.you
  */
-const getCustomAttributesEnd = (mySnakeName, { game, board, turn, you }) => {
+const getCustomAttributesEnd = ({ game, board, turn, you }) => {
   const snakes = board.snakes;
 
   return {
@@ -111,7 +110,7 @@ const getCustomAttributesEnd = (mySnakeName, { game, board, turn, you }) => {
 
     snakeGameWinnerName: snakes.length > 0 ? snakes[0].name : null,
     snakeGameWinnerId: snakes.length > 0 ? snakes[0].id : null,
-    snakeGameIsWin: snakes.length > 0 ? snakes[0].name === mySnakeName : false,
+    snakeGameIsWin: snakes.length > 0 ? snakes[0].name === you.name : false,
     snakeGameReplayLink: `https://play.battlesnake.com/g/${game.id}`,
   };
 };
