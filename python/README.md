@@ -25,4 +25,12 @@ def handle_move():
     for key, value in attributes.items():
         newrelic.agent.add_custom_parameter(key, value)
     # ...your snake logic goes here
+
+@app.post("/end")
+def handle_end():
+    data = request.get_json()
+    attributes = getCustomAttributesEnd(data)
+    for key, value in attributes.items():
+        newrelic.agent.add_custom_parameter(key, value)
+    # ...other logic here
 ```

@@ -49,3 +49,26 @@ def getCustomAttributes(data: dict) -> dict:
         attributes["snakeOpponent_{}_Data".format(i + 1)] = getSnakeData(snake)
 
     return attributes
+
+def getCustomAttributes(data: dict) -> dict:
+    game = data["game"]
+    board = data["board"]
+    you = data["you"]
+
+    attributes = {
+        "snakeGameId": game["id"],
+        "snakeRules": game["ruleset"]["name"],
+        "snakeTurn": data["turn"],
+
+        "snakeName": you["name"],
+        "snakeId": you["id"],
+        "snakeHealth": you["health"],
+        "snakeLength": you["length"],
+
+        "snakeGameWinnerName": board["snakes"][0].name if len(board["snakes"]) > 0 else Null,
+        "snakeGameWinnerId":  board["snakes"][0].id if len(board["snakes"]) > 0 else Null,
+        "snakeGameIsWin": board["snakes"][0].name == you["name"] if len(board["snakes"]) > 0 else False,
+        "snakeGameReplayLink": "https://play.battlesnake.com/g/{id}".format(id=game["id"]),
+    }
+
+    return attributes
