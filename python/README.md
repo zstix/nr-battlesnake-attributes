@@ -8,11 +8,11 @@ To use this helper script, add the [New Relic Python agent](https://docs.newreli
 from flask import Flask
 
 # Add the New Relic APM agent.
-import newrelic
+import newrelic.agent
 
 # Add the helper script.
 # Feel free to place this wherever makes sense for your application.
-from getCustomAttributes import getCustomAttributes
+from getCustomAttributes import getCustomAttributes, getCustomAttributesEnd
 
 app = Flask(__name__)
 
